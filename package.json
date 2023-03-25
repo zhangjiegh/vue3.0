@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "view-ui-plus": "^1.3.9",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

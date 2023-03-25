@@ -1,6 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Card>
+      <template #title>The standard card</template>
+      <p>Content of card</p>
+      <p>Content of card</p>
+      <p>Content of card</p>
+    </Card>
   </div>
 </template>
 
