@@ -1,22 +1,28 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRouter, type RouteRecordName } from 'vue-router'
+const router = useRouter()
+
+const onSelect = (name: RouteRecordName ) => {
+  router.push({
+    name: name
+  })
+}
 </script>
 <template>
   <Layout class="layout-base">
     <Sider hide-trigger>
-      <Menu width="anto" theme="dark">
-        <MenuItem name="1">
+      <Menu width="anto" theme="dark" @on-select="onSelect">
+        <MenuItem name="home">
           <Icon type="ios-paper" />
           主页
         </MenuItem>
 
-        <Submenu name="2">
+        <Submenu name="table">
           <template #title>
             <Icon type="ios-people" />
             表格
           </template>
-          <MenuItem name="2-1">新增用户</MenuItem>
-          <MenuItem name="2-2">活跃用户</MenuItem>
+          <MenuItem name="table_page">table_page</MenuItem>
         </Submenu>
       </Menu>
     </Sider>

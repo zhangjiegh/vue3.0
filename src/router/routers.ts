@@ -12,5 +12,17 @@ export default [
         component: () => import('@/pages/home')
       }
     ]
+  },
+  {
+    path: '/table',
+    name: 'table',
+    component: Main,
+    children: [
+      {
+        path: '/table_page',
+        name: 'table_page',
+        component: () => import('@/pages/table')
+      }
+    ]
   }
 ]
